@@ -36,5 +36,12 @@ console.log("FindIndex:", findIndex);
 
 //sort
 let userNum1 = [16, 25, 34, 43, 52, 11, 74, 89, 49];
-userNum1.sort((a,b)=>b-a);
+userNum1.sort((a, b) => b - a);
 console.log(userNum1);
+
+//reduce
+let num2 = [1, 2, 3, 4, 5];
+let sum = num2.reduce((acc, curr) => {
+  return acc + curr;
+}, 0);
+console.log(sum);
