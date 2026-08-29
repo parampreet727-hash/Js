@@ -45,3 +45,40 @@ let sum = num2.reduce((acc, curr) => {
   return acc + curr;
 }, 0);
 console.log(sum);
+
+//slice vs splice
+
+//slice
+const userFruit = ["APPLE", "BANANA", "KIWI", "CHERRY"];
+const slicedFruit = userFruit.slice(1, 3);
+console.log(slicedFruit);
+console.log(userFruit);
+
+//splice
+const splicedFruit = ["APPLE", "BANANA", "KIWI", "CHERRY"];
+const splicedFruit1 = splicedFruit.splice(1, 2, "x");
+console.log(splicedFruit1);
+console.log(splicedFruit);
+
+//concat
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [6, 7, 8, 9, 10];
+console.log(arr1.concat(arr2));
+
+//flat
+const nestedArray = [1, 2, 3, [5, 6], [7, 8, [9, 10]]];
+const flattenedArray = nestedArray.flat();
+console.log(flattenedArray);
+console.log(flattenedArray.flat(2));
+
+//spread operator(...)
+let xNum = [1, 2, 3];
+let yNum = [6, 7, 8];
+console.log([...xNum, ...yNum]);
+
+//Destructuring
+let user1 = [1, 2, 3];
+let [a, b, c] = user1;
+console.log(a);
+console.log(b);
+console.log(c);
