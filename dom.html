@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <!-- <h1 id="demo">Document Object Model ID</h1>
+    <h1 class="demo">Document Object Model class</h1>
+    <h2>Document Object Model</h2> -->
+
+    <!-- <p id="content">Old Text</p>
+<a id="link" href="https:www.google.com" target="_blank">Google</a> -->
+
+    <div id="container"></div>
+    <button onclick="addButton()">Add Me</button>
+    <button onclick="removeButton()">Remove Me</button>
+
+    <script>
+      //   console.log(document.body.firstChild.nextSibling);
+      //   document.getElementById("demo");
+      //   document.getElementsByClassName("demo");
+      //   document.getElementsByTagName("h2");
+      //   console.log(document.getElementById("demo"));
+      //   console.log(document.getElementsByClassName("demo"));
+      //   console.log(document.getElementsByTagName("h2"));
+
+      //Manipulating the DOM
+      // document.getElementById("content").innerText = "New Text"
+      // document.getElementById("content").innerHTML = "<b>Bold Text </b>";
+      // document.getElementById("link").href = "https://www.youtube.com";
+
+      //Adding and Removing elements
+      function addButton() {
+        const box = document.createElement("div");
+        box.innerText = "New Box";
+        box.id = "box";
+        document.getElementById("container").appendChild(box);
+      }
+
+      function removeButton() {
+        const box = document.getElementById("box");
+        if (box) {
+          box.remove();
+        }
+      }
+    </script>
+  </body>
+</html>
