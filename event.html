@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event and Event Listner</title>
+  </head>
+  <body>
+    <!-- <button id="btn">Click Me</button> -->
+
+    <!-- Inline Event (Not Recommended) -->
+    <!-- <button onclick="sayHello()">Click Me</button> -->
+
+    <!-- HTML DOM Property (Not Recommended) -->
+    <!-- <button id="btn1">Click Me</button> -->
+
+    <!-- Event Listner (Recommended) -->
+    <!-- <button id="btn3">Click Me</button> -->
+
+    <!-- Event Removed -->
+    <button id="btn">Add Me</button>
+    <button id="removeBtn">Remove Me</button>
+
+    <script>
+      //   const button = document.getElementById("btn");
+      //   button.addEventListener("click", function () {
+      //     alert("Button was clicked!");
+      //   });
+
+      // Inline Event
+      //   function sayHello() {
+      //     alert("Hello, World!");
+      //   }
+
+      // HTML DOM Property
+      //   document.getElementById("btn1").onclick = function () {
+      //     alert("Hello, Html Dom Property");
+      //   };
+
+      // Event Listner
+      //   document.getElementById("btn3").addEventListener("click", function () {
+      //     alert("Hello, Event Listener");
+      //   });
+
+      // Event Removed
+      const btn = document.getElementById("btn");
+      const removeBtn = document.getElementById("removeBtn");
+      function sayHello() {
+        alert("Hello, World!");
+      }
+      btn.addEventListener("click", sayHello);
+      removeBtn.addEventListener("click", function () {
+        btn.removeEventListener("click", sayHello);
+        alert("Event listner removed");
+      });
+    </script>
+  </body>
+</html>
