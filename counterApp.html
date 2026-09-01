@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="count">0</h1>
+    <button id="increaseBtn">Increase</button>
+    <button id="decreaseBtn">Decrease</button>
+    <button id="restBtn">Rest</button>
+
+    <script>
+      const count = document.getElementById("count");
+      const inBtn = document.getElementById("increaseBtn");
+      const deBtn = document.getElementById("decreaseBtn");
+      const reBtn = document.getElementById("restBtn");
+
+      let value = 0;
+
+      inBtn.addEventListener("click", () => {
+        value++;
+        count.textContent = value;
+        count.style.color = "blue";
+      });
+
+      deBtn.addEventListener("click", () => {
+        if (value > 0) {
+          value--;
+          count.textContent = value;
+          count.style.color = "red";
+        }
+      });
+
+      reBtn.addEventListener("click", () => {
+        value = 0;
+        count.textContent = value;
+        count.style.color = "green";
+      });
+    </script>
+  </body>
+</html>
