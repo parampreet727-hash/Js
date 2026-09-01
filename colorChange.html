@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Change</title>
+  </head>
+  <body>
+    <h1 id="userName1">Parampreet Dhatt</h1>
+    <button id="redBtn">Color Red</button>
+    <button id="blueBtn">Color Blue</button>
+    <button id="greenBtn">Color Green</button>
+
+    <script>
+      const userNameColor = document.querySelector("#userName1");
+      const buttonColorChange = document.querySelector("#redBtn");
+      const buttonColorChange1 = document.querySelector("#blueBtn");
+      const buttonColorChange2 = document.querySelector("#greenBtn");
+
+      buttonColorChange.addEventListener("click", function () {
+        userNameColor.style.color = "red";
+      });
+
+      buttonColorChange1.addEventListener("click", function () {
+        userNameColor.style.color = "blue";
+      });
+
+      buttonColorChange2.addEventListener("click", function () {
+        userNameColor.style.color = "green";
+      });
+    </script>
+  </body>
+</html>
